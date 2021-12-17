@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_ubb/routers/router.dart';
 import 'package:web_ubb/services/navigation_service.dart';
+import 'package:web_ubb/ui/core/theme/app_theme.dart';
 import 'package:web_ubb/utils/utilities.dart';
 
 class Header extends StatelessWidget {
@@ -33,7 +34,7 @@ class Header extends StatelessWidget {
                   GestureDetector(
                     onTap: () =>
                         NavigatorService.navigateTo(Flurorouter.rootRoute),
-                    child: const MouseRegion(
+                    child: MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: FittedBox(
                         fit: BoxFit.fill,
@@ -42,7 +43,7 @@ class Header extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: primaryColor,
+                            color: AppThemeCustom.primaryColor,
                           ),
                         ),
                       ),
@@ -64,7 +65,7 @@ class Header extends StatelessWidget {
                     width: 270,
                     height: 32,
                     decoration: BoxDecoration(
-                        color: secondaryColor,
+                        color: AppThemeCustom.secondaryColor,
                         borderRadius: BorderRadius.circular(30)),
                     child: const Center(
                         child: Text(

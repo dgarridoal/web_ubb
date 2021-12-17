@@ -1,11 +1,11 @@
 {
-    "name": "web_ubb",
-    "short_name": "web_ubb",
+    "name": "Ingeniería Civil en Informática",
+    "short_name": "ICInf Chillán",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0c3e61",
+    "theme_color": "#0c3e61",
+    "description": "Página web oficial de la carrera Ingeniería Civil en Informática de la Universidad del Bío-Bío en Chillán.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
