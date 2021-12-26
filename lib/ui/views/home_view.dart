@@ -13,22 +13,20 @@ class HomeView extends StatelessWidget {
     ];
 
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Center(
         child: CarouselSlider.builder(
             itemCount: imgSlider.length,
-            itemBuilder: (context, index, realIndex) => Container(
-                  child: Image(
-                    fit: BoxFit.cover,
-                    image: AssetImage(
-                      imgSlider[index],
-                    ),
+            itemBuilder: (context, index, realIndex) => Image(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    imgSlider[index],
                   ),
                 ),
             options: CarouselOptions(
               height: 500,
               autoPlay: true,
-              autoPlayInterval: Duration(seconds: 5),
+              autoPlayInterval: const Duration(seconds: 5),
             )),
       ),
     );

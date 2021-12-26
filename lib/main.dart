@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:web_ubb/ui/core/theme/app_theme.dart';
 
 import 'routers/router.dart';
 import 'services/navigation_service.dart';
+import 'ui/core/theme/app_theme.dart';
 import 'ui/layouts/home_layout.dart';
 
 void main() {

@@ -52,7 +52,10 @@ class DesktopMode extends StatelessWidget {
                       buildElementosInteres(),
                       const SizedBox(height: 40),
                       GestureDetector(
-                        onTap: () async {},
+                        onTap: () async {
+                          //* TODO: Implementar los archivos en la carpeta "assets"
+                          // await downloadFile("assets/img/fondo.jpg", "Malla ICInf.pdf");
+                        },
                         child: MouseRegion(
                           cursor: SystemMouseCursors.click,
                           child: Row(

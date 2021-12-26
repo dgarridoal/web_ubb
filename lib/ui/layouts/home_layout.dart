@@ -19,7 +19,7 @@ class HomeLayout extends StatelessWidget {
               : MobileMode(child: child),
           size.width < 1024
               ? Container(
-                  color: Color(0xFF242424),
+                  color: const Color(0xFF242424),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Column(

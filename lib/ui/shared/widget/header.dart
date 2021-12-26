@@ -34,7 +34,7 @@ class Header extends StatelessWidget {
                   GestureDetector(
                     onTap: () =>
                         NavigatorService.navigateTo(Flurorouter.rootRoute),
-                    child: MouseRegion(
+                    child: const MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: FittedBox(
                         fit: BoxFit.fill,
