@@ -26,7 +26,7 @@ class Header extends StatelessWidget {
                     height: 200,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/img/logoubb.png'),
+                        image: AssetImage('assets/img/logo_ici.png'),
                       ),
                       color: Colors.transparent,
                     ),

@@ -51,8 +51,9 @@ class _HorarioViewState extends State<HorarioView>
                 const Spacer(),
                 IconButton(
                   //TODO: Hacer que se haga la descarga del horario
-                  onPressed: () => irAWeb(
-                      'https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=a93460ce0e'),
+                  onPressed: () {
+                    downloadFile("", "Horario Semestral.xlxs");
+                  },
                   icon: Icon(
                     Icons.download_rounded,
                     color: Colors.green[800],
@@ -65,7 +66,7 @@ class _HorarioViewState extends State<HorarioView>
               height: 600,
               width: double.infinity,
 
-              //TODO: cambiar todo por un listview para que se vea mejor
+              //TODO: cambiar todo por un PageView para que se vea mejor
               child: TabBarView(
                 controller: _tabController,
                 children: [

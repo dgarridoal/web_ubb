@@ -53,8 +53,9 @@ class DesktopMode extends StatelessWidget {
                       const SizedBox(height: 40),
                       GestureDetector(
                         onTap: () async {
-                          //* TODO: Implementar los archivos en la carpeta "assets"
-                          // await downloadFile("assets/img/fondo.jpg", "Malla ICInf.pdf");
+                          await downloadFile(
+                              "assets/file/Malla ICI 2957-1.pdf · versión 1.pdf",
+                              "Malla ICInf.pdf");
                         },
                         child: MouseRegion(
                           cursor: SystemMouseCursors.click,

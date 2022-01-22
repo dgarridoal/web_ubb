@@ -1,4 +1,4 @@
-# web_ubb
+# Proyecto Web UBB ICInf Chillán
 
 A new Flutter project.
 
