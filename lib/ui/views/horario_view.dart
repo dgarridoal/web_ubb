@@ -14,116 +14,116 @@ class _HorarioViewState extends State<HorarioView>
   @override
   Widget build(BuildContext context) {
     final _tabController = TabController(length: 5, vsync: this);
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16.0),
-      physics: const BouncingScrollPhysics(),
-      child: Container(
-        constraints: const BoxConstraints(maxWidth: double.infinity),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Spacer(),
-                TabBar(
-                  indicatorColor: Colors.white,
-                  controller: _tabController,
-                  isScrollable: true,
-                  tabs: const [
-                    Tab(
-                      text: 'Nivel I y II',
-                    ),
-                    Tab(
-                      text: 'Nivel III y IV',
-                    ),
-                    Tab(
-                      text: 'Nivel V y VI',
-                    ),
-                    Tab(
-                      text: 'Nivel VII y VIII',
-                    ),
-                    Tab(
-                      text: 'Nivel X',
-                    ),
-                  ],
-                  labelColor: Colors.white,
-                ),
-                const Spacer(),
-                IconButton(
-                  //TODO: Hacer que se haga la descarga del horario
-                  onPressed: () {
-                    downloadFile("", "Horario Semestral.xlxs");
-                  },
-                  icon: Icon(
-                    Icons.download_rounded,
-                    color: Colors.green[800],
-                  ),
-                ),
-                const SizedBox(width: 10),
-              ],
-            ),
-            SizedBox(
-              height: 600,
-              width: double.infinity,
-
-              //TODO: cambiar todo por un PageView para que se vea mejor
-              child: TabBarView(
-                controller: _tabController,
+    return DefaultTabController(
+      length: 5,
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        physics: const BouncingScrollPhysics(),
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: double.infinity),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    margin: const EdgeInsets.all(5.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/img/nivel_I_y_II.png'),
-                        fit: BoxFit.fill,
+                  const Spacer(),
+                  TabBar(
+                    isScrollable: true,
+                    indicatorColor: Colors.white,
+                    controller: _tabController,
+                    tabs: const [
+                      Tab(
+                        text: 'Nivel I',
                       ),
+                      Tab(
+                        text: 'Nivel II y III',
+                      ),
+                      Tab(
+                        text: 'Nivel IV y V',
+                      ),
+                      Tab(
+                        text: 'Nivel VII y VIII',
+                      ),
+                      Tab(
+                        text: 'Nivel IX y X',
+                      ),
+                    ],
+                    labelColor: Colors.white,
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () => irAWeb(
+                        'https://download1319.mediafire.com/s8zw66ej6yhg/kq45krg4ngaq6cc/Horario+ICI+2022-1++Plan+2957-1+-+V2+%2818-03-2022%29.xlsx'),
+                    icon: Icon(
+                      Icons.download_rounded,
+                      color: Colors.green[800],
                     ),
                   ),
-                  Container(
-                    margin: const EdgeInsets.all(5.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/img/nivel_III_y_IV.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.all(5.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/img/nivel_V_y_VI.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.all(5.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/img/nivel_VII_y_VIII.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.all(5.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: const DecorationImage(
-                        image: AssetImage('assets/img/nivel_X.png'),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
+                  const SizedBox(width: 10),
                 ],
               ),
-            ),
-          ],
+              SizedBox(
+                height: 600,
+                width: double.infinity,
+                //TODO: cambiar todo por un PageView para que se vea mejor
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/img/nivel_I.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/img/nivel_II_III.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/img/nivel_IV_V.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/img/nivel_VII_VIII.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          image: AssetImage('assets/img/nivel_IX_X.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

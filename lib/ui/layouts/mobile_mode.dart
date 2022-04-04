@@ -79,11 +79,8 @@ class MobileMode extends StatelessWidget {
             child: Column(
               children: [
                 GestureDetector(
-                  onTap: () async {
-                    await downloadFile(
-                        "assets/file/Malla ICI 2957-1.pdf · versión 1.pdf",
-                        "Malla ICInf.pdf");
-                  },
+                  onTap: () => irAWeb(
+                      'https://download1336.mediafire.com/2ls4vi8wcrxg/mk7l8jlmu04fzkj/Malla+ICI+2957-1.pdf+%C2%B7+versio%CC%81n+1.pdf'),
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Row(
